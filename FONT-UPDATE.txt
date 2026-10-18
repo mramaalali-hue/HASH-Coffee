@@ -1,0 +1,7 @@
+تحديث الخط في index.html:
+استبدلي رابط Google Fonts الحالي بهذا الرابط:
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+باقي ملف HTML يبقى كما هو. تأكدي أن الملفات باسم style.css و script.js في نفس مجلد index.html.

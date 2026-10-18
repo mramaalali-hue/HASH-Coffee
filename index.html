@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HASH Coffee | قهوتك على مزاجك</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">HASH <span>Coffee</span></a>
+    <nav>
+      <a href="#menu">القائمة</a>
+      <a href="#booking">الحجز</a>
+      <a href="#activity">سجل الطلبات</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">قهوة تستحق وقتك</span>
+        <h1>قهوتك المفضلة،<br>على مزاجك.</h1>
+        <p>قهوة محضّرة بعناية، تفاصيل بسيطة، ولحظات تستحق أن تعيشها.</p>
+        <a class="btn primary" href="#menu">استكشف القائمة</a>
+      </div>
+      <div class="hero-image">
+        <img src="image/caf.jpg" alt="قهوة هاش">
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="section-heading">
+        <span class="eyebrow">اختياراتنا</span>
+        <h2>القائمة</h2>
+        <p>ثلاثة مشروبات، وكل واحد له مزاجه الخاص.</p>
+      </div>
+
+      <div class="products">
+        <article class="product" data-name="إسبريسو مزدوج" data-price="12">
+          <img src="image/7c9f19fbdd67da6b5657ebee68ca8d1c.jpg" alt="إسبريسو مزدوج">
+          <div class="product-info">
+            <h3>إسبريسو مزدوج</h3>
+            <p>نكهة مركزة وقوام غني لعشاق القهوة الأصيلة.</p>
+            <div class="product-footer">
+              <strong>12 ريال</strong>
+              <button class="btn order-btn" type="button">اطلب الآن</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product" data-name="فلات وايت" data-price="19">
+          <img src="image/2389ebede8001153c706ea9adeb2c5bb.jpg" alt="فلات وايت">
+          <div class="product-info">
+            <h3>فلات وايت</h3>
+            <p>إسبريسو مع حليب ناعم ومتوازن.</p>
+            <div class="product-footer">
+              <strong>19 ريال</strong>
+              <button class="btn order-btn" type="button">اطلب الآن</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product" data-name="كولد برو" data-price="21">
+          <img src="image/25a7abe915a9b1d699575f3882ff810a.jpg" alt="كولد برو">
+          <div class="product-info">
+            <h3>كولد برو</h3>
+            <p>قهوة باردة بنكهة هادئة ومنعشة.</p>
+            <div class="product-footer">
+              <strong>21 ريال</strong>
+              <button class="btn order-btn" type="button">اطلب الآن</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="booking-section section" id="booking">
+      <div class="section-heading">
+        <span class="eyebrow">مكانك بانتظارك</span>
+        <h2>احجز طاولتك</h2>
+        <p>زيارة عادية أو مناسبة خاصة، جهّز حجزك في خطوات بسيطة.</p>
+      </div>
+
+      <div class="booking-layout">
+        <form id="booking-form" class="booking-form">
+          <h3>تفاصيل الحجز</h3>
+
+          <label class="field">
+            <span>نوع الحجز</span>
+            <select id="booking-type" required>
+              <option value="visit">زيارة عادية</option>
+              <option value="party">حفلة أو مناسبة</option>
+            </select>
+          </label>
+
+          <div id="party-options" class="party-options" hidden>
+            <div class="party-heading">
+              <h4>إضافات الحفلة</h4>
+              <p>اختَر اللمسات التي تناسب مناسبتك.</p>
+            </div>
+
+            <label class="addon">
+              <input type="checkbox" id="cake">
+              <span class="addon-details">
+                <strong>كيكة</strong>
+                <small>مع كتابة العبارة التي تختارها</small>
+              </span>
+              <b>45 ريال</b>
+            </label>
+
+            <label class="field message-field" id="cake-message-wrap" hidden>
+              <span>العبارة على الكيكة</span>
+              <input id="cake-message" maxlength="80" placeholder="مثال: عيد ميلاد سعيد">
+            </label>
+
+            <label class="addon">
+              <input type="checkbox" id="flowers">
+              <span class="addon-details">
+                <strong>ورد</strong>
+                <small>إضافة جميلة لطاولة المناسبة</small>
+              </span>
+              <b>30 ريال</b>
+            </label>
+
+            <label class="addon">
+              <input type="checkbox" id="plate-writing">
+              <span class="addon-details">
+                <strong>كتابة على الصحن</strong>
+                <small>عبارة قصيرة من اختيارك</small>
+              </span>
+              <em>مجانًا</em>
+            </label>
+
+            <label class="field message-field" id="plate-message-wrap" hidden>
+              <span>العبارة على الصحن</span>
+              <input id="plate-message" maxlength="60" placeholder="اكتب عبارتك هنا">
+            </label>
+
+            <div class="extras-total">
+              <span>إجمالي الإضافات</span>
+              <strong id="extras-total">0 ريال</strong>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <label class="field">
+              <span>الاسم</span>
+              <input id="customer-name" required maxlength="80" placeholder="الاسم الكامل">
+            </label>
+
+            <label class="field">
+              <span>رقم الجوال</span>
+              <input id="customer-phone" type="tel" required placeholder="05xxxxxxxx" maxlength="16" dir="ltr">
+            </label>
+
+            <label class="field">
+              <span>تاريخ الحجز</span>
+              <input id="booking-date" type="date" required>
+            </label>
+
+            <label class="field">
+              <span>الوقت</span>
+              <select id="booking-time" required></select>
+            </label>
+
+            <label class="field">
+              <span>عدد الأشخاص</span>
+              <select id="guest-count">
+                <option value="1">شخص واحد</option>
+                <option value="2" selected>شخصان</option>
+                <option value="3">3 أشخاص</option>
+                <option value="4">4 أشخاص</option>
+                <option value="5">5 أشخاص</option>
+                <option value="6">6 أشخاص</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>رقم الطاولة</span>
+              <select id="table-number" required>
+                <option value="">اختر الطاولة</option>
+                <option value="1">طاولة 1 — شخصان</option>
+                <option value="2">طاولة 2 — شخصان</option>
+                <option value="3">طاولة 3 — 4 أشخاص</option>
+                <option value="4">طاولة 4 — 4 أشخاص</option>
+                <option value="5">طاولة 5 — 6 أشخاص</option>
+                <option value="6">طاولة 6 — شخصان</option>
+              </select>
+            </label>
+          </div>
+
+          <p id="booking-message" class="form-message" role="status" aria-live="polite"></p>
+          <button type="submit" class="btn primary submit-btn">تأكيد الحجز</button>
+          <p class="demo-note">نموذج تجريبي — لا يتم إرسال بيانات الحجز إلى جهة خارجية.</p>
+        </form>
+
+        <aside class="booking-aside">
+          <div class="aside-card">
+            <span class="eyebrow">مناسبتك بطريقتك</span>
+            <h3>تفاصيل صغيرة،<br>تجربة أجمل.</h3>
+            <p>أضف كيكة أو وردًا، واكتب عبارتك الخاصة على الصحن دون رسوم إضافية.</p>
+            <div class="aside-price"><span>الكيكة</span><strong>45 ريال</strong></div>
+            <div class="aside-price"><span>الورد</span><strong>30 ريال</strong></div>
+            <div class="aside-price"><span>الكتابة على الصحن</span><strong>مجانًا</strong></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section activity-section" id="activity">
+      <div class="section-heading">
+        <span class="eyebrow">نشاطك</span>
+        <h2>طلباتك وحجوزاتك</h2>
+        <p>تظهر هنا الحجوزات والطلبات التجريبية المسجلة على هذا الجهاز.</p>
+      </div>
+      <div id="activity-list" class="activity-list">
+        <p class="empty-state">لا توجد حجوزات أو طلبات حتى الآن.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#home">HASH <span>Coffee</span></a>
+    <p>قهوتك المفضلة، في وقتك المفضل.</p>
+    <small>© <span id="year"></span> HASH Coffee — جميع الحقوق محفوظة.</small>
+  </footer>
+
+  <dialog id="order-dialog" class="order-dialog">
+    <button type="button" id="close-dialog" class="dialog-close" aria-label="إغلاق">×</button>
+    <h2 id="order-title">طلب جديد</h2>
+    <p id="order-price"></p>
+    <label class="field">
+      <span>الاسم</span>
+      <input id="order-customer" maxlength="80" placeholder="اسمك">
+    </label>
+    <label class="field">
+      <span>الكمية</span>
+      <select id="order-quantity">
+        <option value="1">1</option><option value="2">2</option>
+        <option value="3">3</option><option value="4">4</option>
+      </select>
+    </label>
+    <p id="order-total" class="order-total"></p>
+    <p id="order-message" class="form-message" role="status"></p>
+    <button id="confirm-order" type="button" class="btn primary submit-btn">تأكيد الطلب التجريبي</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
